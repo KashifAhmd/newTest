@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1, h2{
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2.2PX;
+    text-align: center;
+    color: rgb(207, 171, 125);
+    /* color: #bc8c4c; */
+}
+h3, h4, h5, h6, button, a, li{
+    font-family: "Montserrat", sans-serif;
+}
+p, input{
+  font-family: "PT Serif", serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+/* ----------------- Home Section ---------------- */
+#Home{
+    width: 100%;
+    background-color: black;
+}
+/* Header */
+
+header{
+    width: 90%;
+    margin: 40px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .baikal{
+    display: none;
+}
+.burger{
+    display: none;
+}
+.logo .baikal-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.logo h1:hover{
+    color: rgb(240, 212, 176);
+}
+.logo img, .foot-logo img{
+    width: 4rem;
+    border-radius:50%;
+    border: 2px solid#cbab61 ;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+nav .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+nav .menu a{
+    color: rgb(207, 171, 125);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav .menu a:hover{
+    color: rgb(240, 212, 176);
+    transform: translateY(-3px);
+}
+header nav .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.sIcon{
+    color: rgb(240, 212, 176);
+    cursor: pointer;
+    font-size: 18px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;align-items: center;
+    border: 1px solid rgb(240, 212, 176);
+    border-radius: 50%;
+}
+.sIcon:hover{
+    color: #cbab61;
+    border-color: #cbab61;
+}
+
+
+
+@media(max-width:1000px)
+{
+    header, .logo .baikal-text, nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .logo .baikal-text{
+        gap: 5px;
+    }
+    header nav .social{
+        display: none;
+    }
+    .logo img, .foot-logo img{
+        width: 3rem;
+    }
+}
+@media(max-width:768px)
+{
+    header, .logo .baikal-text{
+        flex-direction: row;
+    }
+    .logo .baikal-text{
+        display: none;
+    }
+    
+    header .baikal{
+        display: block;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .burger div{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: rgb(207, 171, 125);
+    }
+    nav{
+        z-index: 99999;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 100%;
+        height: 0vh;
+        background-color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.35s ease-in;
+        overflow: hidden;
+        gap: 3vh;
+      }
+      nav .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60vh;
+      }
+      .navbar {
+        height: 90vh;
+      }
+      header nav .social{
+        display: flex;
+      }
+      .toggle .line1{
+        transform: rotate(45deg) translate(5px, 6px);
+        transition: all 0.3s ease-in;
+      }
+      .toggle .line2{
+        /* transform: rotate(-45deg),translate(-5px, 6px); */
+        opacity: 0;
+    
+      }
+      .toggle .line3{
+        transform: rotate(-45deg) translate(5px, -6px);
+        transition: all 0.3s ease-in;
+      }
+}
+
+/* Hero section */
+#Home .hero{
+    width: 100%;
+}
+#Home .hero img{
+    width: 100%;
+}
+
+/* ----------------- Accordian Section ---------------- */
+
+#faqs{
+    width: 100%;
+    background-color: black;
+    padding: 5vw 0;
+}
+.faqs{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#faqs hr{
+    width: 150px;
+    margin: 1rem auto;
+}
+#faqs h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 4vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.faqs .qAn{
+    display: flex;
+    flex-direction: column;
+    /* gap: 0px; */
+    position: relative;
+    margin: 10px 20px;
+  }
+  .faqs .qAn .label{
+    position: relative;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(240, 212, 176);
+    color: rgb(240, 212, 176);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faqs .qAn .label h3{
+    font-size: medium;
+  }
+  .faqs .qAn .label i{
+    font-size: 20px;
+  }
+  .up{
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+  /* .faqs .qAn .label::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-style: serif;
+  }
+  
+  .faqs .qAn.active .label::before{
+    content: '-';
+  } */
+  
+  .faqs .qAn .content{
+    position: relative;
+    background-color: rgb(240, 212, 176);
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    color: black;
+  }
+  .faqs .qAn.active .content{
+    height: auto;
+    padding: 10px;
+  }
+
+  @media(max-width:768px){
+    .faqs{
+        width: 80%;
+    }
+  }
+  @media(max-width:425px){
+    .faqs .qAn .label h3{
+        font-size: 14px;
+      }
+  }
+
+
+/* ----------------- Footer Section ---------------- */
+
+footer{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer{
+    padding: 5vw 0;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .footer .foot-logo .baikal-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot-logo h2:hover{
+    /* color: rgb(240, 212, 176); */
+    cursor: pointer;
+}
+footer .footer h4{
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(240, 212, 176);
+}
+
+
+footer .footer .foot-logo, footer .content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5vw;
+}
+footer .content ul li{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(207, 171, 125);
+}
+footer .content ul li:hover{
+    transform: translateX(-5px);
+    color: rgb(240, 212, 176);
+}
+
+footer .newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+footer .newsletter h3{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(207, 171, 125);
+}
+footer .newsletter .input{
+    display: flex;
+    flex-direction: column;
+    gap: 8px 10px;
+}
+footer .newsletter .input input, footer .newsletter .input button{
+    width: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    text-align: center;
+}
+footer .newsletter .input input{
+    background-color: transparent;
+    border: 1px solid rgb(207, 171, 125);
+}
+footer .newsletter .input input::placeholder{
+    color:rgb(207, 171, 125);
+    text-align: center;
+}
+footer .newsletter .input input:focus{
+    color: rgb(240, 212, 176);
+    font-size: 14px;
+}
+footer .newsletter .input button{
+    background-color: rgb(207, 171, 125);
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+
+hr{
+    width: 90%;
+    border-color: #cbab61;
+}
+
+footer .copy-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 5vw 0;
+    text-align: center;
+}
+footer .copy-right .follow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media(max-width:1000px){
+    footer .footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+@media(max-width:600px){
+    footer .footer h4{
+        display: none;
+    }
+}
+
+@media(max-width:768px){
+    footer .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5vw;
+    }
+    footer .content{
+        gap: 20px;
+    }
+}
+@media(max-width:425px){
+    footer .copy-right .follow{
+        gap: 10px;
+    }
+}
