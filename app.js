@@ -29,10 +29,3 @@ for( let i=0; i<accordian.length; i++){
 
     })
 }
-
-
-// for( let i=0; i<arrow.length; i++){
-//     arrow[i].addEventListener('click', function(){
-//         this.classList.toggle('up');
-//     })
-// }
